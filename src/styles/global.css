@@ -1,1 +1,139 @@
 @import "tailwindcss";
+
+@theme {
+    --color-primary-dark: #0d0d0d;
+    --color-primary: #1a1a1a;
+    --color-primary-medium: #333333;
+    --color-primary-ligth: #4d4d4d;
+
+    --color-secondary-dark: #a3885c;
+    --color-secondary: #c0a26d;
+    --color-secondary-medium: #d4b482;
+    --color-secondary-light: #e6c9a0;
+
+    --color-tercero-dark: #9a805f;
+    --color-tercero: #b89b75;
+    --color-tercero-medium: #d4b58e;
+    --color-tercero-light: #e6d0b5;
+
+    --color-cuarto-dark: #b8a582;
+    --color-cuarto: #d4c29b;
+    --color-cuarto-medium: #e6d8bc;
+    --color-cuarto-light: #f0e7d4;
+
+    --color-quinto-dark: #e0ddd0;
+    --color-quinto: #f3f1e7;
+    --color-quinto-medium: #f9f8f5;
+    --color-quinto-light: #ffffff;
+
+    --font-title-regular: "PlayfairDisplay-Regular", sans-serif;
+    --font-title-medium: "PlayfairDisplay-Medium", sans-serif;
+    --font-title-bold: "PlayfairDisplay-Bold", sans-serif;
+
+    --font-special-regular: "Cinzel-Regular", sans-serif;
+    --font-special-medium: "Cinzel-Medium", sans-serif;
+    --font-special-semibold: "Cinzel-SemiBold", sans-serif;
+    --font-special-bold: "Cinzel-Bold", sans-serif;
+
+    --font-body-regular: "CormorantGaramond-Regular", serif;
+    --font-body-medium: "CormorantGaramond-Medium", serif;
+    --font-body-semibold: "CormorantGaramond-SemiBold", serif;
+    --font-body-bold: "CormorantGaramond-Bold", serif;
+    --font-body-semibold-italic: "CormorantGaramond-SemiBoldItalic", serif;
+}
+
+@font-face {
+    font-family: "PlayfairDisplay-Regular";
+    src: url("/font/PlayfairDisplay-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PlayfairDisplay-Medium";
+    src: url("/font/PlayfairDisplay-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PlayfairDisplay-Bold";
+    src: url("/font/PlayfairDisplay-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cinzel-Regular";
+    src: url("/font/Cinzel-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cinzel-Medium";
+    src: url("/font/Cinzel-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cinzel-SemiBold";
+    src: url("/font/Cinzel-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cinzel-Bold";
+    src: url("/font/Cinzel-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CormorantGaramond-Regular";
+    src: url("/font/CormorantGaramond-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CormorantGaramond-Medium";
+    src: url("/font/CormorantGaramond-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CormorantGaramond-SemiBold";
+    src: url("/font/CormorantGaramond-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CormorantGaramond-Bold";
+    src: url("/font/CormorantGaramond-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CormorantGaramond-SemiBoldItalic";
+    src: url("/font/CormorantGaramond-SemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
