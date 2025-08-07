@@ -1,5 +1,11 @@
+---
+import WhatsappIcon from "@/icons/WhatsappIcon.astro";
+import InstagramIcon from "@/icons/InstagramIcon.astro";
+import TripadvisorIcon from "@/icons/TripadvisorIcon.astro";
+---
+
 <footer
-    class="bg-primary rounded-lg shadow-sm w-full m-4 mx-auto max-w-5xl text-cuarto"
+    class="bg-primary-medium rounded-lg shadow-sm w-full m-4 mx-auto max-w-5xl text-cuarto"
 >
     <div
         class="p-4 md:flex md:items-center md:justify-between font-special-regular"
@@ -8,24 +14,27 @@
             >© 2025 <a href="#" class="hover:underline">Bar-Cafe 1874™</a>.
             Todos los derechos reservados.
         </span>
-        <ul class="flex flex-wrap items-center mt-3 text-sm sm:mt-0">
-            <li>
-                <a href="#" class="hover:underline me-4 md:me-6">Home</a>
+        <ul
+            class="flex flex-row gap-x-2 justify-center md:items-center mt-3 text-sm sm:mt-0"
+        >
+            <li class="hover:scale-110 hover:text-cuarto-light transition">
+                <a
+                    href="https://api.whatsapp.com/send?phone=5353295533&text=%F0%9F%91%8B%20Hola%2C%20vengo%20de%20https%3A%2F%2Fbar-cafe-1874.olaclick.menu%20%0ADeseo%20realizar%20el%20siguiente%20pedido%3A%0A"
+                >
+                    <WhatsappIcon />
+                </a>
             </li>
-            <li>
-                <a href="#" class="hover:underline me-4 md:me-6">Menu</a>
+            <li class="hover:scale-110 hover:text-cuarto-light transition">
+                <a href="https://www.instagram.com/bar_cafe1874/">
+                    <InstagramIcon />
+                </a>
             </li>
-            <li>
-                <a href="#" class="hover:underline me-4 md:me-6">About</a>
-            </li>
-            <li>
-                <a href="#" class="hover:underline me-4 md:me-6">Eventos</a>
-            </li>
-            <li>
-                <a href="#" class="hover:underline me-4 md:me-6">Blog</a>
-            </li>
-            <li>
-                <a href="#" class="hover:underline">Contactos</a>
+            <li class="hover:scale-110 hover:text-cuarto-light transition">
+                <a
+                    href="https://www.tripadvisor.com/Restaurant_Review-g3314210-d21375736-Reviews-Cafe_1874-Ciego_de_Avila_Ciego_de_Avila_Province_Cuba."
+                >
+                    <TripadvisorIcon />
+                </a>
             </li>
         </ul>
     </div>

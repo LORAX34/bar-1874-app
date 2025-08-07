@@ -1,9 +1,15 @@
 ---
-import Welcome from '@/components/Welcome.astro';
-import Layout from '@/layouts/Layout.astro';
-
+import Layout from "@/layouts/Layout.astro";
+import HeroHome from "@/components/ui/HeroHome.astro";
+import PlatillosEspeciales from "@/components/ui/PlatillosEspeciales.astro";
+import BentoEvento from "@/components/ui/BentoEvento.astro";
+import Estructura from "@/components/ui/Estructura.astro";
 ---
 
 <Layout>
-	<Welcome />
+    <Estructura>
+        <HeroHome />
+        <PlatillosEspeciales />
+        <BentoEvento />
+    </Estructura>
 </Layout>

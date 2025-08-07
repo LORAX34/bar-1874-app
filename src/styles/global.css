@@ -42,6 +42,8 @@
     --font-body-semibold-italic: "CormorantGaramond-SemiBoldItalic", serif;
 }
 
+@plugin "@midudev/tailwind-animations";
+
 @font-face {
     font-family: "PlayfairDisplay-Regular";
     src: url("/font/PlayfairDisplay-Regular.woff2") format("woff2");
