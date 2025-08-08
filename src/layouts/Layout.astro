@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Footer from "@/components/layout/Footer.astro";
 import Header from "@/components/layout/Header.astro";
 import Analytics from "@vercel/analytics/astro";
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 const siteUrl = "https://bar-1874-app.vercel.app";
 ---
 
@@ -39,6 +40,7 @@ const siteUrl = "https://bar-1874-app.vercel.app";
 
         <meta name="generator" content={Astro.generator} />
         <title>Bar-Cafe 1874</title>
+        <SpeedInsights/>
         <Analytics />
     </head>
     <body>
