@@ -10,7 +10,7 @@
     },
     "dependencies": {
         "@astrojs/svelte": "^7.1.0",
-        "@astrojs/vercel": "^8.2.5",
+        "@astrojs/vercel": "^8.0.4",
         "@midudev/tailwind-animations": "^0.2.0",
         "@tailwindcss/vite": "^4.1.11",
         "@vercel/analytics": "^1.5.0",
