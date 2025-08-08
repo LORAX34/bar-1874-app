@@ -4,26 +4,86 @@
 
 <header class="w-full m-4 mx-auto max-w-5xl text-cuarto">
     <div
-        class="flex animate-blurred-fade-in animate-delay-300 justify-center w-full items-center"
+        class="flex animate-blurred-fade-in animate-delay-300 justify-center w-full items-center mb-4"
     >
-        <img class="w-[280px]" src="/Listo.webp" alt="" />
+        <img
+            class="w-48 md:w-64 lg:w-80"
+            src="/Listo.webp"
+            alt="Bar 1874 Logo"
+        />
     </div>
-    <nav
-        class="flex flex-row animate-fade-in animate-delay-150 justify-around items-center font-special-regular text-3xl"
-    >
+
+    <nav class="animate-fade-in animate-delay-150 font-special-regular">
         <div
-            class="flex justify-center gap-x-4 border-secondary-light border-b-2 w-6xl"
+            class="hidden md:flex flex-row justify-around items-center text-xl lg:text-2xl xl:text-3xl"
         >
-            <a class="hover:text-cuarto-light transition" href="#">Home</a>
-            <a class="hover:text-cuarto-light transition" href="#">Menu</a>
-            <a class="hover:text-cuarto-light transition" href="#">Eventos</a>
+            <div
+                class="flex justify-center gap-x-4 border-secondary-light border-b-2 w-6xl"
+            >
+                <a
+                    class="hover:text-cuarto-light transition duration-300"
+                    href="#">Home</a
+                >
+                <a
+                    class="hover:text-cuarto-light transition duration-300"
+                    href="#">Menu</a
+                >
+                <a
+                    class="hover:text-cuarto-light transition duration-300"
+                    href="#">Eventos</a
+                >
+            </div>
+            <div
+                class="flex justify-center gap-x-4 border-secondary-light border-b-2 w-6xl"
+            >
+                <a
+                    class="hover:text-cuarto-light transition duration-300"
+                    href="#">Blog</a
+                >
+                <a
+                    class="hover:text-cuarto-light transition duration-300"
+                    href="#">About</a
+                >
+                <a
+                    class="hover:text-cuarto-light transition duration-300"
+                    href="#">Contacto</a
+                >
+            </div>
         </div>
-        <div
-            class="flex justify-center gap-x-4 border-secondary-light border-b-2 w-6xl"
-        >
-            <a class="hover:text-cuarto-light transition" href="#">Blog</a>
-            <a class="hover:text-cuarto-light transition" href="#">About</a>
-            <a class="hover:text-cuarto-light transition" href="#">Contacto</a>
+
+        <div class="md:hidden flex flex-col items-center space-y-6 text-lg">
+            <div
+                class="flex flex-wrap justify-center gap-x-6 gap-y-3 border-secondary-light border-b-2 pb-4"
+            >
+                <a
+                    class="hover:text-cuarto-light transition duration-300"
+                    href="#">Home</a
+                >
+                <a
+                    class="hover:text-cuarto-light transition duration-300"
+                    href="#">Menu</a
+                >
+                <a
+                    class="hover:text-cuarto-light transition duration-300"
+                    href="#">Eventos</a
+                >
+            </div>
+            <div
+                class="flex flex-wrap justify-center gap-x-6 gap-y-3 border-secondary-light border-b-2 pb-4"
+            >
+                <a
+                    class="hover:text-cuarto-light transition duration-300"
+                    href="#">Blog</a
+                >
+                <a
+                    class="hover:text-cuarto-light transition duration-300"
+                    href="#">About</a
+                >
+                <a
+                    class="hover:text-cuarto-light transition duration-300"
+                    href="#">Contacto</a
+                >
+            </div>
         </div>
     </nav>
 </header>
