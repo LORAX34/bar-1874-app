@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+import Analytics from "@vercel/analytics/astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
+
+const siteUrl = "https://bar-1874-app.vercel.app";
+---
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+        <meta
+            name="description"
+            content="Página no encontrada - Bar-Cafe 1874"
+        />
+        <meta property="og:title" content="404 - Bar-Cafe 1874" />
+        <meta property="og:url" content={siteUrl} />
+        <meta name="generator" content={Astro.generator} />
+        <title>404 - Bar-Cafe 1874</title>
+    </head>
+    <body>
+        <slot />
+        <SpeedInsights />
+        <Analytics />
+    </body>
+</html>
+
+<style>
+    html,
+    body {
+        background: #0d0d0d;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
