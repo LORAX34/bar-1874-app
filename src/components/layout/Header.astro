@@ -1,89 +1,47 @@
----
-
----
-
 <header class="w-full m-4 mx-auto max-w-5xl text-cuarto">
-    <div
-        class="flex animate-blurred-fade-in animate-delay-300 justify-center w-full items-center mb-4"
-    >
-        <img
-            class="w-48 md:w-64 lg:w-80"
-            src="/Listo.webp"
-            alt="Bar 1874 Logo"
-        />
+    <div class="flex justify-center w-full items-center mb-4">
+        <!-- Contenedor del logo -->
+        <div
+            class="relative group w-48 md:w-64 lg:w-80 animate-blurred-fade-in animate-delay-150"
+            style="mask-image: url('/Listo.webp'); mask-size: contain; mask-repeat: no-repeat;"
+        >
+            <img
+                class="w-full h-full object-contain pointer-events-none"
+                src="/Listo.webp"
+                alt="Bar 1874 Logo"
+            />
+            <div
+                class="absolute inset-0 -translate-x-full bg-[length:200%_100%] bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-500 ease-in-out group-hover:translate-x-full"
+            >
+            </div>
+        </div>
     </div>
 
     <nav class="animate-fade-in animate-delay-150 font-special-regular">
+        <!-- Menú único responsive -->
         <div
-            class="hidden md:flex flex-row justify-around items-center text-xl lg:text-2xl xl:text-3xl"
+            class="flex flex-wrap justify-center gap-x-4 gap-y-2 md:gap-x-8 lg:gap-x-10 border-secondary-light border-b-2 pb-3 px-4 text-lg md:text-xl lg:text-2xl"
         >
-            <div
-                class="flex justify-center gap-x-4 border-secondary-light border-b-2 w-6xl"
+            <a
+                class="hover:text-cuarto-light transition duration-300 px-2 py-1 whitespace-nowrap"
+                href="#">Home</a
             >
-                <a
-                    class="hover:text-cuarto-light transition duration-300"
-                    href="#">Home</a
-                >
-                <a
-                    class="hover:text-cuarto-light transition duration-300"
-                    href="#">Menu</a
-                >
-                <a
-                    class="hover:text-cuarto-light transition duration-300"
-                    href="#">Eventos</a
-                >
-            </div>
-            <div
-                class="flex justify-center gap-x-4 border-secondary-light border-b-2 w-6xl"
+            <a
+                class="hover:text-cuarto-light transition duration-300 px-2 py-1 whitespace-nowrap"
+                href="#">Menu</a
             >
-                <a
-                    class="hover:text-cuarto-light transition duration-300"
-                    href="#">Blog</a
-                >
-                <a
-                    class="hover:text-cuarto-light transition duration-300"
-                    href="#">About</a
-                >
-                <a
-                    class="hover:text-cuarto-light transition duration-300"
-                    href="#">Contacto</a
-                >
-            </div>
-        </div>
-
-        <div class="md:hidden flex flex-col items-center space-y-6 text-lg">
-            <div
-                class="flex flex-wrap justify-center gap-x-6 gap-y-3 border-secondary-light border-b-2 pb-4"
+            <a
+                class="hover:text-cuarto-light transition duration-300 px-2 py-1 whitespace-nowrap"
+                href="#">Eventos</a
             >
-                <a
-                    class="hover:text-cuarto-light transition duration-300"
-                    href="#">Home</a
-                >
-                <a
-                    class="hover:text-cuarto-light transition duration-300"
-                    href="#">Menu</a
-                >
-                <a
-                    class="hover:text-cuarto-light transition duration-300"
-                    href="#">Eventos</a
-                >
-            </div>
-            <div
-                class="flex flex-wrap justify-center gap-x-6 gap-y-3 border-secondary-light border-b-2 pb-4"
+            <a
+                class="hover:text-cuarto-light transition duration-300 px-2 py-1 whitespace-nowrap"
+                href="#">Blog</a
             >
-                <a
-                    class="hover:text-cuarto-light transition duration-300"
-                    href="#">Blog</a
-                >
-                <a
-                    class="hover:text-cuarto-light transition duration-300"
-                    href="#">About</a
-                >
-                <a
-                    class="hover:text-cuarto-light transition duration-300"
-                    href="#">Contacto</a
-                >
-            </div>
+            <a
+                class="hover:text-cuarto-light transition duration-300 px-2 py-1 whitespace-nowrap"
+                href="#">About</a
+            >
         </div>
     </nav>
 </header>
