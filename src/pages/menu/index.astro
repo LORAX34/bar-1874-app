@@ -3,7 +3,12 @@ import Layout from "@/layouts/Layout.astro";
 import Estructura from "@/components/ui/Estructura.astro";
 import { getCollection } from "astro:content";
 
-const menuEntries = await getCollection("menu");
+// Obtener solo items visibles desde el principio
+const menuEntries = (await getCollection("menu")).filter(
+    (item) => item.data.visible !== false,
+);
+
+// Generar categorías solo con items visibles
 const categorias = [
     ...new Set(menuEntries.map((item) => item.slug.split("/")[0])),
 ];
