@@ -1,12 +1,67 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Estructura from "@/components/ui/Estructura.astro";
+import { getCollection } from "astro:content";
+
+const menuEntries = await getCollection("menu");
+const categorias = [
+    ...new Set(menuEntries.map((item) => item.slug.split("/")[0])),
+];
 ---
 
 <Layout>
     <Estructura>
-        <h1 class="text-7xl font-title-bold text-secondary-dark">
-            Cafe 1874 Menu
+        <h1
+            class="text-4xl md:text-7xl font-title-bold text-secondary-dark text-center mb-12"
+        >
+            Nuestro Menú
         </h1>
+
+        <div class="grid gap-12 px-4">
+            {
+                categorias.map((categoria) => (
+                    <section class="mb-8">
+                        <h2 class="text-3xl md:text-4xl font-title-medium text-secondary-medium mb-6 border-b-2 border-secondary-light pb-2">
+                            {categoria.toUpperCase()}
+                        </h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {menuEntries
+                                .filter((item) =>
+                                    item.slug.startsWith(categoria),
+                                )
+                                .map((item) => (
+                                    <a
+                                        href={`/menu/${item.slug}`}
+                                        class="group transition-all duration-300 hover:scale-[1.02]"
+                                    >
+                                        <div class="h-full bg-primary-medium/10 hover:bg-primary-medium/20 border border-secondary-light/20 rounded-lg overflow-hidden shadow-lg">
+                                            <div class="aspect-square overflow-hidden">
+                                                <img
+                                                    src={item.data.image_url}
+                                                    alt={item.data.name}
+                                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                    width="400"
+                                                    height="400"
+                                                    loading="lazy"
+                                                />
+                                            </div>
+
+                                            <div class="p-4 flex justify-between items-start">
+                                                <h3 class="text-sm font-title-medium text-secondary-dark">
+                                                    {item.data.name}
+                                                </h3>
+                                                <span class="text-sm font-special-bold text-primary-dark bg-secondary-light/50 px-3 py-1 rounded-full">
+                                                    $
+                                                    {item.data.price.toLocaleString()}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                ))}
+                        </div>
+                    </section>
+                ))
+            }
+        </div>
     </Estructura>
 </Layout>
