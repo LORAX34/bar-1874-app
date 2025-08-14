@@ -1,15 +1,21 @@
 ---
+// src/pages/loading.astro
+import LoadingScreen from "@/components/layout/LoadingScreen.astro";
+import { setTimeout } from "timers/promises";
 import Layout from "@/layouts/Layout.astro";
-import HeroHome from "@/components/ui/HeroHome.astro";
-import PlatillosEspeciales from "@/components/ui/PlatillosEspeciales.astro";
-import BentoEvento from "@/components/ui/BentoEvento.astro";
 import Estructura from "@/components/ui/Estructura.astro";
+await setTimeout(4000);
 ---
 
 <Layout>
     <Estructura>
-        <HeroHome />
-        <PlatillosEspeciales />
-        <BentoEvento />
+        <body>
+            <LoadingScreen />
+            <script>
+                setTimeout(() => {
+                    window.location.href = "/Home";
+                }, 4000);
+            </script>
+        </body>
     </Estructura>
 </Layout>
