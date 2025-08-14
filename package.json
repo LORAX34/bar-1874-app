@@ -17,6 +17,10 @@
         "@vercel/speed-insights": "^1.2.0",
         "astro": "^5.12.8",
         "svelte": "^5.38.0",
-        "tailwindcss": "^4.1.11"
+        "tailwindcss": "^4.1.11",
+        "three": "^0.179.1"
+    },
+    "devDependencies": {
+        "@types/three": "^0.179.0"
     }
 }

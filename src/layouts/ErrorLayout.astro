@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Analytics from "@vercel/analytics/astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
+import SmokeBackground from "@/components/ui/SmokeBackground.astro";
 
 const siteUrl = "https://bar-1874-app.vercel.app";
 ---
@@ -25,13 +26,13 @@ const siteUrl = "https://bar-1874-app.vercel.app";
         <slot />
         <SpeedInsights />
         <Analytics />
+        <SmokeBackground />
     </body>
 </html>
 
 <style>
     html,
     body {
-        background: #0d0d0d;
         margin: 0;
         width: 100%;
         height: 100%;

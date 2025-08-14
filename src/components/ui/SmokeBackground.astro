@@ -1,0 +1,75 @@
+<div id="smoke-bg" class="fixed top-0 h-full w-full -z-[100]"></div>
+
+<script>
+    import * as THREE from "three";
+    const $bkg = document.getElementById("smoke-bg");
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, w / h, 1, 10000);
+    camera.position.z = 100;
+    scene.add(camera);
+
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(w, h);
+    renderer.setClearColor(0xdddddd, 1);
+
+    const smokeParticles: THREE.Mesh[] = [];
+    const loader = new THREE.TextureLoader();
+    loader.crossOrigin = "";
+
+    loader.load(
+        "/pngwing.com (1).png",
+        (texture) => {
+            const smokeGeo = new THREE.PlaneGeometry(240, 240);
+            const smokeMaterial = new THREE.MeshLambertMaterial({
+                map: texture,
+                transparent: true,
+            });
+
+            const light = new THREE.AmbientLight(0xffffff, 0.5);
+            light.position.set(-1, 3, 1);
+            scene.add(light);
+
+            const NUM_OF_PARTICLES = 200;
+            for (let i = 0; i < NUM_OF_PARTICLES; i++) {
+                const smoke = new THREE.Mesh(smokeGeo, smokeMaterial);
+                smoke.position.set(
+                    Math.random() * 800 - 400,
+                    Math.random() * 800 - 400,
+                    Math.random() * 500 - 250,
+                );
+                smoke.rotation.z = Math.random() * 360;
+                scene.add(smoke);
+                smokeParticles.push(smoke);
+            }
+        },
+        undefined,
+        (error) => {
+            console.error("Error al cargar la textura:", error);
+        },
+    );
+
+    $bkg?.appendChild(renderer.domElement);
+
+    function animate() {
+        requestAnimationFrame(animate);
+
+        smokeParticles.forEach((smoke) => {
+            smoke.rotation.z += 0.001;
+        });
+
+        renderer.render(scene, camera);
+    }
+    animate();
+
+    // Manejo de redimensionamiento
+    window.addEventListener("resize", () => {
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+        renderer.setSize(w, h);
+    });
+</script>
