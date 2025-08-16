@@ -44,7 +44,9 @@ const { Content } = await platillo.render();
                     </p>
                 </div>
 
-                <div class="prose max-w-none mt-6 text-secondary-medium/80">
+                <div
+                    class="prose lg:prose-xl max-w-none mt-6 text-secondary-medium/80"
+                >
                     <Content />
                 </div>
 
@@ -58,25 +60,3 @@ const { Content } = await platillo.render();
         </div>
     </Estructura>
 </Layout>
-
-<style is:global>
-    .prose h2 {
-        font-size: 1.25rem;
-        font-weight: 700;
-        margin-top: 1.5rem;
-        margin-bottom: 0.75rem;
-        color: #1e293b;
-    }
-    .prose p {
-        margin-top: 0.75rem;
-        margin-bottom: 0.75rem;
-        line-height: 1.625;
-    }
-    .prose ul {
-        list-style-type: disc;
-        padding-left: 1.25rem;
-    }
-    .prose ul > li {
-        margin-bottom: 0.25rem;
-    }
-</style>
