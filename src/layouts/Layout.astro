@@ -4,6 +4,17 @@ import Footer from "@/components/layout/Footer.astro";
 import Header from "@/components/layout/Header.astro";
 import Analytics from "@vercel/analytics/astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
+import { ViewTransitions } from "astro:transitions";
+
+interface Props {
+    title?: string;
+    description?: string;
+}
+
+const {
+    title = "Bar Café 1874",
+    description = "Bar-Cafe 1874 es el mejor bar y café de la ciudad. ¡Ven y disfruta de nuestra amplia selección de bebidas y deliciosos platos!",
+} = Astro.props;
 const siteUrl = "https://bar-1874-app.vercel.app";
 ---
 
@@ -13,16 +24,10 @@ const siteUrl = "https://bar-1874-app.vercel.app";
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-        <meta
-            name="description"
-            content="Bar-Cafe 1874 es el mejor bar y café de la ciudad. ¡Ven y disfruta de nuestra amplia selección de bebidas y deliciosos platos!"
-        />
+        <meta name="description" content={description} />
         <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
-        <meta property="og:title" content="Bar-Cafe 1874" />
-        <meta
-            property="og:description"
-            content="El mejor bar y café de la ciudad. Amplia selección de bebidas y platos deliciosos en un ambiente único."
-        />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta
             property="og:image"
             content={`${siteUrl}/photo_2025-08-02_11-12-55.webp`}
@@ -33,19 +38,17 @@ const siteUrl = "https://bar-1874-app.vercel.app";
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Bar-Cafe 1874" />
-        <meta
-            name="twitter:description"
-            content="Descubre el mejor bar y café de la ciudad con ambiente único y platos exquisitos"
-        />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
         <meta
             name="twitter:image"
             content={`${siteUrl}/photo_2025-08-02_11-12-55.webp`}
         />
 
         <meta name="generator" content={Astro.generator} />
+        <ViewTransitions />
 
-        <title>Bar-Cafe 1874</title>
+        <title>{title}</title>
     </head>
     <body>
         <Header />
