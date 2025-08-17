@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@plugin "@midudev/tailwind-animations";
 @theme {
     --color-primary-dark: #0d0d0d;
     --color-primary: #1a1a1a;
@@ -41,8 +42,6 @@
     --font-body-bold: "CormorantGaramond-Bold", serif;
     --font-body-semibold-italic: "CormorantGaramond-SemiBoldItalic", serif;
 }
-
-@plugin "@midudev/tailwind-animations";
 
 @font-face {
     font-family: "PlayfairDisplay-Regular";
