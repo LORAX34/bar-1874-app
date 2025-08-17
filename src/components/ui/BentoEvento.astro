@@ -4,8 +4,6 @@ import { getCollection } from "astro:content";
 const eventos = await getCollection("events", ({ data }) => {
     return data;
 });
-
-eventos.sort((a, b) => new Date(b.data.fecha) - new Date(a.data.fecha));
 ---
 
 <h1
@@ -14,7 +12,7 @@ eventos.sort((a, b) => new Date(b.data.fecha) - new Date(a.data.fecha));
     Proximos Eventos
 </h1>
 <main
-    class="grid grid-cols-2 auto-rows-[150px] gap-3 p-4
+    class="grid grid-cols-2 auto-rows-[150px] gap-3
             sm:auto-rows-[180px] md:grid-cols-4 md:auto-rows-[200px] md:gap-4 lg:auto-rows-[220px]"
 >
     <!-- Celda 1 (Doble altura) - Destacado -->
