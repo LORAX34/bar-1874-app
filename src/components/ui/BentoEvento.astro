@@ -38,7 +38,7 @@ const bentoLayout = [
         Próximos Eventos
     </h1>
 
-    <main class="grid grid-cols-2 auto-rows-[150px] gap-3 sm:auto-rows-[180px] md:grid-cols-4 md:auto-rows-[200px] md:gap-4">
+    <main class="grid grid-cols-2 auto-rows-[150px] px-1.5 gap-3 sm:auto-rows-[180px] md:grid-cols-4 md:auto-rows-[200px] md:gap-4">
         {eventos.map((evento, index) => {
             const layout = bentoLayout[index] || bentoLayout[0];
             const isFeatured = layout.type === "featured";
