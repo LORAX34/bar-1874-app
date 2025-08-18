@@ -24,7 +24,7 @@ const categorias = [
             {
                 categorias.map((categoria) => (
                     <section class="mb-8">
-                        <h2 class="text-3xl md:text-4xl font-title-medium text-secondary-medium mb-6 border-b-2 border-secondary-light pb-2">
+                        <h2 class="text-3xl md:text-4xl font-title-regular text-secondary-medium mb-6 border-b-2 border-secondary-light pb-2">
                             {categoria.toUpperCase()}
                         </h2>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -50,10 +50,10 @@ const categorias = [
                                             </div>
 
                                             <div class="p-4 flex justify-between items-start">
-                                                <h3 class="text-sm font-title-medium text-secondary-dark">
+                                                <h3 class="text-sm text-tercero-light font-title-regular">
                                                     {item.data.name}
                                                 </h3>
-                                                <span class="text-sm font-special-bold text-primary-dark bg-secondary-light/50 px-3 py-1 rounded-full">
+                                                <span class="text-sm font-special-medium text-secondary-light bg-primary-medium px-3 py-1 rounded-full">
                                                     $
                                                     {item.data.price.toLocaleString()}
                                                 </span>

@@ -33,19 +33,19 @@ const { Content } = await platillo.render();
             <section class="md:w-1/2 flex flex-col justify-center items-center">
                 <div>
                     <h1
-                        class="text-2xl md:text-3xl font-bold text-secondary-medium"
+                        class="text-4xl md:text-7xl font-title-bold text-secondary-dark text-center mb-12"
                     >
                         {platillo.data.name}
                     </h1>
                     <p
-                        class="text-xl md:text-2xl text-cuarto-light font-bold mt-2"
+                        class="text-xl md:text-2xl text-cuarto-light font-special-medium font-bold mt-2"
                     >
                         ${platillo.data.price}
                     </p>
                 </div>
 
                 <div
-                    class="prose lg:prose-xl max-w-none mt-6 text-secondary-medium/80"
+                    class="prose lg:prose-xl max-w-none mt-6 text-tercero-dark"
                 >
                     <Content />
                 </div>
